@@ -13,6 +13,7 @@ START_DAY="2022-04-03"
 # if the system clock is set to the UTC, +9 hours
 TODAY="$(gdate -d 'now +9 hours' '+%Y-%m-%d')"
 FILE_PATH="./strings.txt"
+LOG_PATH="logs/auto-commits.txt"
 
 # should_commit="false"
 col=0
@@ -31,7 +32,7 @@ do
                 echo "DO today's commit"
                 echo "${diff}"
                 # ==== commit start =====
-                date >> logs/auto-commits.txt
+                date >> "${LOG_PATH}"
                 git add .
                 git commit -m "Update"
                 git push
