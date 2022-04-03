@@ -1,0 +1,21 @@
+name: auto_commit
+on:
+  schedule:
+    # 日本時間25時00分
+    - cron: '*/5 * * * *'
+    # - cron: '0 16 * * *'
+
+jobs:
+  checker:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v2
+      - name: commit
+        run: |
+          git config user.name kokoichi2
+          git config user.email kokoichi.64a@gmail.com
+          date >> logs/auto-commits.txt
+          git add .
+          git commit -m "Update"
+          git push
