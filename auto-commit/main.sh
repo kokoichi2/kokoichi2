@@ -12,7 +12,7 @@ START_DAY="2022-04-03"
 
 # if the system clock is set to the UTC, +9 hours
 TODAY="$(gdate -d 'now +9 hours' '+%Y-%m-%d')"
-FILE_PATH="./strings.txt"
+FILE_PATH="auto-commit/strings.txt"
 LOG_PATH="logs/auto-commits.txt"
 
 # should_commit="false"
