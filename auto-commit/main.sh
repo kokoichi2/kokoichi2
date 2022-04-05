@@ -11,7 +11,7 @@ git config user.email kokoichi.64a@gmail.com
 START_DAY="2022-04-03"
 
 # if the system clock is set to the UTC, +9 hours
-TODAY="$(gdate -d 'now +9 hours' '+%Y-%m-%d')"
+TODAY="$(date -d 'now +9 hours' '+%Y-%m-%d')"
 FILE_PATH="auto-commit/strings.txt"
 LOG_PATH="logs/auto-commits.txt"
 
@@ -25,7 +25,7 @@ do
     while [ "$count" -lt "${#line}" ]; do
         
         diff="$((count * 7 + col))"
-        target_date="$(echo gdate -d \'${START_DAY} +${diff} days\' \'+%Y-%m-%d\' | bash)"
+        target_date="$(echo date -d \'${START_DAY} +${diff} days\' \'+%Y-%m-%d\' | bash)"
         if [[ "${target_date}" == "${TODAY}" ]]; then
             target="${line:$count:1}"
             if [[ "$target" == "*" ]]; then
