@@ -9,6 +9,5 @@ Here are some ideas to get you started:
 - 👯 I’m looking to collaborate on NOTHING!
 - 🤔 I’m looking for help with MY JOB HUNTING
 - 💬 Ask me about NOTHING!
-- 📫 How to reach me: NO WAY
 - 😄 Pronouns: ???
 - ⚡ Fun fact: Do USELESS things.
