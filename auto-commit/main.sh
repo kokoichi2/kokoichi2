@@ -28,7 +28,7 @@ do
         diff="$((count * 7 + col))"
         target_date="$(echo date -d \'${START_DAY} +${diff} days\' \'+%Y-%m-%d\' | bash)"
         if [[ "${target_date}" == "${TODAY}" ]]; then
-            echo "target date: ${target_date}"
+            echo "FOUND target date: ${target_date}"
             target="${line:$count:1}"
             if [[ "$target" == "*" ]]; then
                 echo "DO today's commit"
