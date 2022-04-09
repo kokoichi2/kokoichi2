@@ -15,6 +15,7 @@ TODAY="$(date -d 'now +9 hours' '+%Y-%m-%d')"
 FILE_PATH="auto-commit/strings.txt"
 LOG_PATH="logs/auto-commits.txt"
 
+echo "today: ${TODAY}"
 # should_commit="false"
 col=0
 while read -r line
@@ -27,6 +28,7 @@ do
         diff="$((count * 7 + col))"
         target_date="$(echo date -d \'${START_DAY} +${diff} days\' \'+%Y-%m-%d\' | bash)"
         if [[ "${target_date}" == "${TODAY}" ]]; then
+            echo "target date: ${target_date}"
             target="${line:$count:1}"
             if [[ "$target" == "*" ]]; then
                 echo "DO today's commit"
