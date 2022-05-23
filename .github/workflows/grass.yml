@@ -1,8 +1,8 @@
 name: auto_commit
 on:
   schedule:
-    # 日本時間25時00分
-    - cron: '0 16 * * *'
+    # 日本時間19時00分
+    - cron: '0 10 * * *'
 
 jobs:
   auto-commit:
